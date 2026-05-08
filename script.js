@@ -48,6 +48,59 @@ function initFadeInAnimations() {
     });
 }
 
+// Typewriter effect for dynamic title
+const titles = ["web developer", "student", "innovator"];
+let currentIndex = 0;
+let currentText = "";
+let isDeleting = false;
+const dynamicTitle = document.getElementById("dynamic-title");
+
+function typeWriter() {
+    const fullText = titles[currentIndex];
+
+    if (isDeleting) {
+        currentText = fullText.substring(0, currentText.length - 1);
+    } else {
+        currentText = fullText.substring(0, currentText.length + 1);
+    }
+
+    dynamicTitle.textContent = "I am a " + currentText;
+
+    let typeSpeed = 100;
+
+    if (isDeleting) {
+        typeSpeed /= 2;
+    }
+
+    if (!isDeleting && currentText === fullText) {
+        typeSpeed = 2000; // pause at end
+        isDeleting = true;
+    } else if (isDeleting && currentText === "") {
+        isDeleting = false;
+        currentIndex = (currentIndex + 1) % titles.length;
+        typeSpeed = 500; // pause before typing
+    }
+
+    setTimeout(typeWriter, typeSpeed);
+}
+
+// Start typewriter effect after loading
+document.addEventListener('DOMContentLoaded', function() {
+    const loadingScreen = document.getElementById('loading-screen');
+
+    // Hide loading screen after animation
+    setTimeout(() => {
+        loadingScreen.style.display = 'none';
+        document.body.style.overflow = 'auto';
+
+        // Start fade-in animations for sections
+        initFadeInAnimations();
+
+        // Start typewriter effect
+        typeWriter();
+    }, 4000);
+});
+
 // Profile picture placeholder functionality
 const profilePic = document.getElementById('profile-pic');
 const imagePlaceholder = document.querySelector('.image-placeholder');

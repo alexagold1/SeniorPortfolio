@@ -223,20 +223,94 @@ nav {
 .profile-image {
     position: relative;
     display: inline-block;
-    width: 200px;
-    height: 200px;
+    width: 350px;
+    height: 350px;
     border-radius: 15px;
-    overflow: hidden;
     border: 4px solid rgba(255, 255, 255, 0.3);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
     margin: 0 auto;
+}
+
+.profile-image::before {
+    content: '';
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    right: -4px;
+    bottom: -4px;
+    border: 4px solid transparent;
+    border-radius: 19px;
+    animation: border-draw 4s linear infinite;
+}
+
+@keyframes border-draw {
+    0% {
+        border-top-color: #FF69B4;
+        border-right-color: transparent;
+        border-bottom-color: transparent;
+        border-left-color: transparent;
+    }
+    12.5% {
+        border-top-color: #FF69B4;
+        border-right-color: #FF69B4;
+        border-bottom-color: transparent;
+        border-left-color: transparent;
+    }
+    25% {
+        border-top-color: #FF69B4;
+        border-right-color: #FF69B4;
+        border-bottom-color: #FF69B4;
+        border-left-color: transparent;
+    }
+    37.5% {
+        border-top-color: #FF69B4;
+        border-right-color: #FF69B4;
+        border-bottom-color: #FF69B4;
+        border-left-color: #FF69B4;
+    }
+    50% {
+        border-top-color: transparent;
+        border-right-color: #FF69B4;
+        border-bottom-color: #FF69B4;
+        border-left-color: #FF69B4;
+    }
+    62.5% {
+        border-top-color: transparent;
+        border-right-color: transparent;
+        border-bottom-color: #FF69B4;
+        border-left-color: #FF69B4;
+    }
+    75% {
+        border-top-color: transparent;
+        border-right-color: transparent;
+        border-bottom-color: transparent;
+        border-left-color: #FF69B4;
+    }
+    87.5% {
+        border-top-color: transparent;
+        border-right-color: transparent;
+        border-bottom-color: transparent;
+        border-left-color: transparent;
+    }
+    100% {
+        border-top-color: #FF69B4;
+        border-right-color: transparent;
+        border-bottom-color: transparent;
+        border-left-color: transparent;
+    }
 }
 
 #profile-pic {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    display: none;
+    border-radius: 15px;
+}
+
+#profile-pic {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .image-placeholder {
