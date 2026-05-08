@@ -208,6 +208,54 @@ window.addEventListener('scroll', function() {
         hero.style.transform = `translateY(${rate}px)`;
     }
 });
+// =========================
+// PROJECT FILTERING
+// =========================
 
+const filterButtons =
+document.querySelectorAll('.year-btn');
+
+const projectCards =
+document.querySelectorAll('.project-card-board');
+
+filterButtons.forEach(button => {
+
+    button.addEventListener('click', () => {
+
+        // REMOVE ACTIVE CLASS
+        filterButtons.forEach(btn => {
+            btn.classList.remove('active');
+        });
+
+        // ADD ACTIVE CLASS
+        button.classList.add('active');
+
+        const year = button.dataset.year;
+
+        projectCards.forEach(card => {
+
+            if (year === 'all') {
+
+                card.style.display = 'block';
+
+            }
+
+            else if (card.classList.contains(year)) {
+
+                card.style.display = 'block';
+
+            }
+
+            else {
+
+                card.style.display = 'none';
+
+            }
+
+        });
+
+    });
+
+});
 // Initialize profile picture loading
 loadProfilePicture();

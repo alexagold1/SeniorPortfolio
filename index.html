@@ -72,43 +72,117 @@
             </div>
         </section>
 
-        <section id="projects">
-            <div class="container">
-                <h2>My Projects</h2>
-                <div class="projects-grid">
-                    <div class="project-card">
-                        <h3>Project One</h3>
-                        <p>A web application built with React and Node.js for task management.</p>
-                        <div class="project-tech">
-                            <span>React</span>
-                            <span>Node.js</span>
-                            <span>MongoDB</span>
-                        </div>
-                        <a href="#" class="project-link">View Project</a>
-                    </div>
-                    <div class="project-card">
-                        <h3>Project Two</h3>
-                        <p>An e-commerce platform with modern UI and secure payment integration.</p>
-                        <div class="project-tech">
-                            <span>Vue.js</span>
-                            <span>Express</span>
-                            <span>PostgreSQL</span>
-                        </div>
-                        <a href="#" class="project-link">View Project</a>
-                    </div>
-                    <div class="project-card">
-                        <h3>Project Three</h3>
-                        <p>A data visualization dashboard for business analytics.</p>
-                        <div class="project-tech">
-                            <span>D3.js</span>
-                            <span>Python</span>
-                            <span>Flask</span>
-                        </div>
-                        <a href="#" class="project-link">View Project</a>
-                    </div>
+<!-- =========================
+     PROJECTS SECTION HTML
+========================= -->
+
+<section id="projects">
+    <div class="container">
+
+        <h2>My Projects</h2>
+
+        <!-- FILTER BUTTONS -->
+        <div class="year-buttons">
+
+            <button class="year-btn active" data-year="all">
+                All
+            </button>
+
+            <button class="year-btn" data-year="sophomore">
+                Sophomore
+            </button>
+
+            <button class="year-btn" data-year="junior">
+                Junior
+            </button>
+
+            <button class="year-btn" data-year="senior">
+                Senior
+            </button>
+
+        </div>
+
+        <!-- GALLERY -->
+        <div id="gallery">
+
+            <!-- PROJECT 1 -->
+            <figure class="project-card-board sophomore">
+
+                <img src="imgs/project1.png"
+                    alt="Project One"
+                    class="project-image">
+
+                <h3>Project One</h3>
+
+                <p>
+                    A web application built with React and Node.js for task management.
+                </p>
+
+                <div class="project-tech">
+                    <span>React</span>
+                    <span>Node.js</span>
+                    <span>MongoDB</span>
                 </div>
-            </div>
-        </section>
+
+                <a href="#" class="project-link">
+                    View Project
+                </a>
+
+            </figure>
+
+            <!-- PROJECT 2 -->
+            <figure class="project-card-board junior">
+
+                <img src="imgs/project2.png"
+                    alt="Project Two"
+                    class="project-image">
+
+                <h3>Project Two</h3>
+
+                <p>
+                    An e-commerce platform with modern UI and secure payment integration.
+                </p>
+
+                <div class="project-tech">
+                    <span>Vue.js</span>
+                    <span>Express</span>
+                    <span>PostgreSQL</span>
+                </div>
+
+                <a href="#" class="project-link">
+                    View Project
+                </a>
+
+            </figure>
+
+            <!-- PROJECT 3 -->
+            <figure class="project-card-board senior">
+
+                <img src="imgs/project3.png"
+                    alt="Project Three"
+                    class="project-image">
+
+                <h3>Project Three</h3>
+
+                <p>
+                    A data visualization dashboard for business analytics.
+                </p>
+
+                <div class="project-tech">
+                    <span>D3.js</span>
+                    <span>Python</span>
+                    <span>Flask</span>
+                </div>
+
+                <a href="#" class="project-link">
+                    View Project
+                </a>
+
+            </figure>
+
+        </div>
+    </div>
+</section>
 
         <section id="contact">
             <div class="container">
