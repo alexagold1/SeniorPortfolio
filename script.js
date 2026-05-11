@@ -49,7 +49,7 @@ function initFadeInAnimations() {
 }
 
 // Typewriter effect for dynamic title
-const titles = ["web developer", "student", "innovator"];
+const titles = ["web developer", "innovator", "student", "leader"];
 let currentIndex = 0;
 let currentText = "";
 let isDeleting = false;
@@ -96,8 +96,8 @@ document.addEventListener('DOMContentLoaded', function() {
         // Start fade-in animations for sections
         initFadeInAnimations();
 
-        // Start typewriter effect
-        typeWriter();
+        // Initialize GSAP animations
+        initGSAPAnimations();
     }, 4000);
 });
 
@@ -259,3 +259,129 @@ filterButtons.forEach(button => {
 });
 // Initialize profile picture loading
 loadProfilePicture();
+
+// Scroll indicator click
+document.querySelector('.scroll-indicator').addEventListener('click', () => {
+    document.querySelector('#about').scrollIntoView({ behavior: 'smooth' });
+});
+// =========================
+// GSAP ANIMATIONS
+// =========================
+
+// =========================
+// GSAP ANIMATIONS
+// =========================
+
+function initGSAPAnimations() {
+
+    gsap.registerPlugin(ScrollTrigger);
+
+    // HERO ANIMATION
+    gsap.set(".hero-text h1", {
+        y: 80,
+        opacity: 0
+    });
+
+    gsap.to(".hero-text h1", {
+        y: 0,
+        opacity: 1,
+        duration: 1,
+        delay: 0.1,
+        ease: "power3.out"
+    });
+
+    gsap.from(".hero-text h2", {
+        y: 40,
+        opacity: 0,
+        duration: 1,
+        delay: 0.3,
+        ease: "power3.out"
+    });
+
+    gsap.from(".hero-text p", {
+        y: 40,
+        opacity: 0,
+        duration: 1,
+        delay: 0.5,
+        ease: "power3.out"
+    });
+
+    gsap.from(".cta-button", {
+        y: 30,
+        opacity: 0,
+        duration: 1,
+        delay: 0.8,
+        ease: "power3.out"
+    });
+
+    gsap.from(".profile-image", {
+        scale: 0.8,
+        opacity: 0,
+        duration: 1.5,
+        ease: "elastic.out(1, 0.5)"
+    });
+
+    // ABOUT SECTION
+    gsap.from("#about h2", {
+        opacity: 0,
+        y: 50,
+        duration: 1,
+        ease: "power3.out",
+        scrollTrigger: {
+            trigger: "#about",
+            start: "top 80%"
+        }
+    });
+
+    gsap.from(".about-text p", {
+        opacity: 0,
+        y: 30,
+        duration: 1,
+        stagger: 0.3,
+        ease: "power3.out",
+        scrollTrigger: {
+            trigger: ".about-text",
+            start: "top 80%"
+        }
+    });
+
+    gsap.from(".skills h3", {
+        opacity: 0,
+        x: -30,
+        duration: 1,
+        ease: "power3.out",
+        scrollTrigger: {
+            trigger: ".skills",
+            start: "top 80%"
+        }
+    });
+
+    gsap.from(".skill-tags span", {
+        opacity: 0,
+        scale: 0.8,
+        duration: 0.8,
+        stagger: 0.1,
+        ease: "back.out(1.7)",
+        scrollTrigger: {
+            trigger: ".skill-tags",
+            start: "top 80%"
+        }
+    });
+
+    // START TYPEWRITER
+    setTimeout(typeWriter, 1500);
+}
+
+// =========================
+// CURSOR GLOW
+// =========================
+
+const glow =
+document.querySelector(".cursor-glow");
+
+window.addEventListener("mousemove", (e) => {
+
+    glow.style.left = e.clientX + "px";
+
+    glow.style.top = e.clientY + "px";
+});
