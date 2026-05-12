@@ -672,6 +672,8 @@ section h2::after {
     cursor: pointer;
 
     animation: swing 2s ease-in-out infinite alternate;
+
+    transform-origin: center top;
 }
 
 /* PUSH PIN */
