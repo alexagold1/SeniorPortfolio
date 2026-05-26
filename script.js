@@ -1,387 +1,60 @@
-// Loading screen and logo animation
-document.addEventListener('DOMContentLoaded', function() {
-    const loadingScreen = document.getElementById('loading-screen');
+const staticOverlay = document.getElementById('staticOverlay');
+const contentShell = document.getElementById('contentShell');
+const powerButton = document.getElementById('powerButton');
+const bgPlayer = document.getElementById('bgPlayer');
 
-    // Hide loading screen after animation
-    setTimeout(() => {
-        loadingScreen.style.display = 'none';
-        document.body.style.overflow = 'auto';
+const retroIntro = {
+  started: false
+};
 
-        // Start fade-in animations for sections
-        initFadeInAnimations();
-    }, 4000);
-});
+function startBroadcast() {
+  if (retroIntro.started) return;
 
-// Smooth scrolling for navigation links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            target.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
-        }
-    });
-});
+  retroIntro.started = true;
 
-// Fade-in animations on scroll
-function initFadeInAnimations() {
-    const sections = document.querySelectorAll('section');
+  staticOverlay.classList.remove('hidden');
+  contentShell.classList.remove('active');
 
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-    };
+  setTimeout(() => {
+    staticOverlay.classList.add('hidden');
+    contentShell.classList.add('active');
+  }, 1400);
 
-    const observer = new IntersectionObserver(function(entries) {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('fade-in');
-            }
-        });
-    }, observerOptions);
-
-    sections.forEach(section => {
-        observer.observe(section);
-    });
+  powerButton.textContent = 'TUNED IN';
+  powerButton.disabled = true;
 }
 
-// Typewriter effect for dynamic title
-const titles = ["web developer", "innovator", "student", "leader"];
-let currentIndex = 0;
-let currentText = "";
-let isDeleting = false;
-const dynamicTitle = document.getElementById("dynamic-title");
+powerButton.addEventListener('click', startBroadcast);
 
-function typeWriter() {
-    const fullText = titles[currentIndex];
+const revealCards = document.querySelectorAll(
+  '.panel, .hero-card'
+);
 
-    if (isDeleting) {
-        currentText = fullText.substring(0, currentText.length - 1);
-    } else {
-        currentText = fullText.substring(0, currentText.length + 1);
-    }
+const cardObserver = new IntersectionObserver(
+  (entries) => {
 
-    dynamicTitle.textContent = "I am a " + currentText;
+    entries.forEach((entry) => {
 
-    let typeSpeed = 100;
+      if (entry.isIntersecting) {
 
-    if (isDeleting) {
-        typeSpeed /= 2;
-    }
+        entry.target.style.opacity = '1';
+        entry.target.style.transform = 'translateY(0)';
 
-    if (!isDeleting && currentText === fullText) {
-        typeSpeed = 2000; // pause at end
-        isDeleting = true;
-    } else if (isDeleting && currentText === "") {
-        isDeleting = false;
-        currentIndex = (currentIndex + 1) % titles.length;
-        typeSpeed = 500; // pause before typing
-    }
-
-    setTimeout(typeWriter, typeSpeed);
-}
-
-// Start typewriter effect after loading
-document.addEventListener('DOMContentLoaded', function() {
-    const loadingScreen = document.getElementById('loading-screen');
-
-    // Hide loading screen after animation
-    setTimeout(() => {
-        loadingScreen.style.display = 'none';
-        document.body.style.overflow = 'auto';
-
-        // Start fade-in animations for sections
-        initFadeInAnimations();
-
-        // Initialize GSAP animations
-        initGSAPAnimations();
-    }, 4000);
-});
-
-// Profile picture placeholder functionality
-const profilePic = document.getElementById('profile-pic');
-const imagePlaceholder = document.querySelector('.image-placeholder');
-
-// Simulate profile picture loading (replace with actual image path)
-function loadProfilePicture() {
-    // In a real scenario, you would check if the image exists
-    // For now, we'll keep the placeholder visible
-    // Uncomment the line below when you add your actual profile picture
-    // profilePic.style.display = 'block';
-    // imagePlaceholder.style.display = 'none';
-}
-
-// Form validation and submission
-const contactForm = document.querySelector('.contact-form');
-if (contactForm) {
-    contactForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-
-        const name = this.querySelector('input[type="text"]').value.trim();
-        const email = this.querySelector('input[type="email"]').value.trim();
-        const message = this.querySelector('textarea').value.trim();
-
-        if (!name || !email || !message) {
-            showNotification('Please fill in all fields.', 'error');
-            return;
-        }
-
-        if (!isValidEmail(email)) {
-            showNotification('Please enter a valid email address.', 'error');
-            return;
-        }
-
-        // Here you would typically send the form data to a server
-        showNotification('Thank you for your message! I\'ll get back to you soon.', 'success');
-        this.reset();
+        cardObserver.unobserve(entry.target);
+      }
     });
-}
+  },
+  {
+    threshold: 0.15
+  }
+);
 
-function isValidEmail(email) {
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return emailRegex.test(email);
-}
+revealCards.forEach((card) => {
 
-function showNotification(message, type) {
-    // Create notification element
-    const notification = document.createElement('div');
-    notification.className = `notification ${type}`;
-    notification.textContent = message;
+  card.style.opacity = '0';
+  card.style.transform = 'translateY(14px)';
+  card.style.transition =
+    'opacity 0.6s ease, transform 0.6s ease';
 
-    // Style the notification
-    notification.style.position = 'fixed';
-    notification.style.top = '100px';
-    notification.style.right = '20px';
-    notification.style.padding = '15px 25px';
-    notification.style.borderRadius = '10px';
-    notification.style.color = 'white';
-    notification.style.fontWeight = '500';
-    notification.style.zIndex = '10000';
-    notification.style.boxShadow = '0 10px 30px rgba(0, 0, 0, 0.2)';
-    notification.style.transform = 'translateX(400px)';
-    notification.style.transition = 'transform 0.3s ease';
-
-    if (type === 'success') {
-        notification.style.background = 'linear-gradient(135deg, #FF69B4, #FFB6C1)';
-    } else {
-        notification.style.background = 'linear-gradient(135deg, #F56565, #E53E3E)';
-    }
-
-    document.body.appendChild(notification);
-
-    // Animate in
-    setTimeout(() => {
-        notification.style.transform = 'translateX(0)';
-    }, 100);
-
-    // Remove after 5 seconds
-    setTimeout(() => {
-        notification.style.transform = 'translateX(400px)';
-        setTimeout(() => {
-            document.body.removeChild(notification);
-        }, 300);
-    }, 5000);
-}
-
-// Add scroll effect to header
-window.addEventListener('scroll', function() {
-    const header = document.querySelector('header');
-    if (window.scrollY > 100) {
-        header.style.backgroundColor = 'rgba(255, 255, 255, 0.98)';
-        header.style.boxShadow = '0 5px 30px rgba(255, 105, 180, 0.15)';
-    } else {
-        header.style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
-        header.style.boxShadow = '0 2px 20px rgba(255, 105, 180, 0.1)';
-    }
-});
-
-// Add subtle parallax effect to hero section
-window.addEventListener('scroll', function() {
-    const hero = document.getElementById('hero');
-    const scrolled = window.pageYOffset;
-    const rate = scrolled * -0.5;
-
-    if (hero) {
-        hero.style.transform = `translateY(${rate}px)`;
-    }
-});
-// =========================
-// PROJECT FILTERING
-// =========================
-
-const filterButtons =
-document.querySelectorAll('.year-btn');
-
-const projectCards =
-document.querySelectorAll('.project-card-board');
-
-filterButtons.forEach(button => {
-
-    button.addEventListener('click', () => {
-
-        // REMOVE ACTIVE CLASS
-        filterButtons.forEach(btn => {
-            btn.classList.remove('active');
-        });
-
-        // ADD ACTIVE CLASS
-        button.classList.add('active');
-
-        const year = button.dataset.year;
-
-        projectCards.forEach(card => {
-
-            if (year === 'all') {
-
-                card.style.display = 'block';
-
-            }
-
-            else if (card.classList.contains(year)) {
-
-                card.style.display = 'block';
-
-            }
-
-            else {
-
-                card.style.display = 'none';
-
-            }
-
-        });
-
-    });
-
-});
-// Initialize profile picture loading
-loadProfilePicture();
-
-// Scroll indicator click
-document.querySelector('.scroll-indicator').addEventListener('click', () => {
-    document.querySelector('#about').scrollIntoView({ behavior: 'smooth' });
-});
-// =========================
-// GSAP ANIMATIONS
-// =========================
-
-// =========================
-// GSAP ANIMATIONS
-// =========================
-
-function initGSAPAnimations() {
-
-    gsap.registerPlugin(ScrollTrigger);
-
-    // HERO ANIMATION
-    gsap.set(".hero-text h1", {
-        y: 80,
-        opacity: 0
-    });
-
-    gsap.to(".hero-text h1", {
-        y: 0,
-        opacity: 1,
-        duration: 1,
-        delay: 0.1,
-        ease: "power3.out"
-    });
-
-    gsap.from(".hero-text h2", {
-        y: 40,
-        opacity: 0,
-        duration: 1,
-        delay: 0.3,
-        ease: "power3.out"
-    });
-
-    gsap.from(".hero-text p", {
-        y: 40,
-        opacity: 0,
-        duration: 1,
-        delay: 0.5,
-        ease: "power3.out"
-    });
-
-    gsap.from(".cta-button", {
-        y: 30,
-        opacity: 0,
-        duration: 1,
-        delay: 0.8,
-        ease: "power3.out"
-    });
-
-    gsap.from(".profile-image", {
-        scale: 0.8,
-        opacity: 0,
-        duration: 1.5,
-        ease: "elastic.out(1, 0.5)"
-    });
-
-    // ABOUT SECTION
-    gsap.from("#about h2", {
-        opacity: 0,
-        y: 50,
-        duration: 1,
-        ease: "power3.out",
-        scrollTrigger: {
-            trigger: "#about",
-            start: "top 80%"
-        }
-    });
-
-    gsap.from(".about-text p", {
-        opacity: 0,
-        y: 30,
-        duration: 1,
-        stagger: 0.3,
-        ease: "power3.out",
-        scrollTrigger: {
-            trigger: ".about-text",
-            start: "top 80%"
-        }
-    });
-
-    gsap.from(".skills h3", {
-        opacity: 0,
-        x: -30,
-        duration: 1,
-        ease: "power3.out",
-        scrollTrigger: {
-            trigger: ".skills",
-            start: "top 80%"
-        }
-    });
-
-    gsap.from(".skill-tags span", {
-        opacity: 0,
-        scale: 0.8,
-        duration: 0.8,
-        stagger: 0.1,
-        ease: "back.out(1.7)",
-        scrollTrigger: {
-            trigger: ".skill-tags",
-            start: "top 80%"
-        }
-    });
-
-    // START TYPEWRITER
-    setTimeout(typeWriter, 1500);
-}
-
-// =========================
-// CURSOR GLOW
-// =========================
-
-const glow =
-document.querySelector(".cursor-glow");
-
-window.addEventListener("mousemove", (e) => {
-
-    glow.style.left = e.clientX + "px";
-
-    glow.style.top = e.clientY + "px";
+  cardObserver.observe(card);
 });

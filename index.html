@@ -1,232 +1,194 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alexa Gold - Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Retro Portfolio TV</title>
+
+  <link rel="stylesheet" href="style.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <link href="https://fonts.googleapis.com/css2?family=VT323&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 </head>
+
 <body>
-    <!-- Loading Screen -->
-    <div id="loading-screen">
-        <div class="logo-container">
-            <div class="logo-reveal"></div>
-            <img src="imgs/portfoliologo (2).png" alt="Portfolio Logo" class="actual-logo">
+  <div class="page-backdrop"></div>
+
+  <div class="page-shell">
+    <div class="tv-frame">
+
+      <div class="tv-topbar">
+        <span class="tv-brand">RETRO PORTFOLIO TV</span>
+        <span class="tv-channel">CH 3.1 • STUDIO MODE</span>
+      </div>
+
+      <div class="tv-screen" id="tvScreen">
+
+        <div class="static-overlay" id="staticOverlay">
+
+          <div class="tv-static"></div>
+
+          <div class="static-ripples"></div>
+
+          <div class="intro-copy">
+            <p class="signal-label">NO SIGNAL</p>
+
+            <h1>RETRO PORTFOLIO</h1>
+
+            <p class="intro-copy__subtitle">
+              Web design pathway highlights from the past 3 years
+            </p>
+
+            <div class="intro-bands">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+
+            <button id="powerButton" class="power-button">
+              POWER ON
+            </button>
+
+            <p class="intro-copy__note">
+              Tuning in to “Where’d All the Time Go?” by Dr. Dog
+            </p>
+          </div>
         </div>
-        <div class="loading-text">Loading Portfolio...</div>
+
+        <div class="content-shell" id="contentShell">
+
+          <header class="screen-header">
+            <span>WEB DESIGN PATHWAY</span>
+            <span>3 YEARS • DIGITAL SHOWCASE</span>
+          </header>
+
+          <main class="screen-content">
+
+            <section class="hero-card">
+
+              <div>
+                <p class="eyebrow">WELCOME TO THE SET</p>
+
+                <h2>Alexa Gold</h2>
+
+                <p class="hero-text">
+                  Replace this blurb with your introduction. This is where you can talk about your school experience, your design style, and what you are most proud of in the pathway.
+                </p>
+
+                <div class="hero-metrics">
+                  <div>
+                    <strong>3</strong>
+                    <span>Years in the program</span>
+                  </div>
+
+                  <div>
+                    <strong>12+</strong>
+                    <span>Projects completed</span>
+                  </div>
+
+                  <div>
+                    <strong>UX +</strong>
+                    <span>Web design and coding</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="hero-side">
+
+                <div class="photo-slot">
+                  <span>Insert your photo here</span>
+                </div>
+
+                <div class="tag-row">
+                  <span>HTML</span>
+                  <span>CSS</span>
+                  <span>JavaScript</span>
+                  <span>Figma</span>
+                  <span>Accessibility</span>
+                </div>
+
+              </div>
+            </section>
+
+            <section class="info-grid">
+
+              <article class="panel">
+                <p class="panel-label">ABOUT YOU</p>
+
+                <h3>What you want people to know</h3>
+
+                <p>
+                  Replace this section with your personal story, your goals, and the kind of work you want to create.
+                </p>
+
+                <ul class="bullet-list">
+                  <li>Insert your strongest skill</li>
+                  <li>Insert your favorite project</li>
+                  <li>Insert your next goal</li>
+                </ul>
+              </article>
+
+              <article class="panel">
+
+                <p class="panel-label">SKILLS</p>
+
+                <h3>Pathway skills to highlight</h3>
+
+                <div class="skill-pills">
+                  <span>Responsive layout</span>
+                  <span>CSS animations</span>
+                  <span>UI polish</span>
+                  <span>Interactivity</span>
+                  <span>Design systems</span>
+                  <span>Project planning</span>
+                </div>
+
+              </article>
+            </section>
+
+            <section class="contact-strip">
+
+              <div>
+                <p class="panel-label">CONTACT</p>
+
+                <h3>Let’s connect</h3>
+
+                <p>
+                  Replace these details with your email, school account, and any links you want to feature.
+                </p>
+              </div>
+
+              <div class="contact-details">
+                <p><strong>Email:</strong> your.email@example.com</p>
+                <p><strong>LinkedIn:</strong> linkedin.com/in/yourname</p>
+                <p><strong>GitHub:</strong> github.com/yourname</p>
+              </div>
+
+            </section>
+
+          </main>
+        </div>
+      </div>
+
+      <div class="tv-footer">
+        <span>PRESS POWER TO START</span>
+        <span>STATIC • RETRO • HAND-CODED</span>
+      </div>
+
     </div>
+  </div>
 
-    <header>
-        <nav>
-            <div class="logo">
-                <img src="imgs/portfoliologo (2).png" alt="Portfolio Logo">
-            </div>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+  <iframe
+    id="bgPlayer"
+    title="Dr. Dog intro player"
+    src="https://www.youtube.com/embed/z5bzxPVJhbo?autoplay=1&mute=1&controls=0&rel=0&playsinline=1&loop=1&playlist=z5bzxPVJhbo"
+    allow="autoplay; encrypted-media"
+    loading="lazy"
+    referrerpolicy="strict-origin-when-cross-origin"
+  ></iframe>
 
-    <main>
-        <section id="hero">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <h1>Alexa Gold</h1>
-                    <h2 id="dynamic-title">I am a </h2>
-                    <p>Passionate about creating innovative web solutions and user experiences.</p>
-                    <a href="#contact" class="cta-button">Get In Touch</a>
-                </div>
-                <div class="profile-container">
-                    <div class="profile-image">
-                        <img src="imgs/picturehome.png" alt="Profile Picture" id="profile-pic">
-                    </div>
-                </div>
-                <div class="scroll-indicator">
-                    <i class="fas fa-chevron-down"></i>
-                </div>
-            </div>
-        </section>
-
-        <section id="about">
-            <div class="container">
-                <h2>About Me</h2>
-                <div class="about-content">
-                    <div class="about-text">
-                        <p>I'm a dedicated full stack developer with a passion for creating clean, efficient, and user-friendly applications. With expertise in modern web technologies, I bring ideas to life through code.</p>
-                        <p>My journey in software development has equipped me with skills in both frontend and backend technologies, allowing me to build complete, scalable solutions.</p>
-                    </div>
-                    <div class="skills">
-                        <h3>Skills</h3>
-                        <div class="skill-tags">
-                            <span><i class="fab fa-html5"></i> HTML5</span>
-                            <span><i class="fab fa-css3-alt"></i> CSS3</span>
-                            <span><i class="fab fa-js-square"></i> JavaScript</span>
-                            <span><i class="fab fa-react"></i> React</span>
-                            <span><i class="fab fa-node-js"></i> Node.js</span>
-                            <span><i class="fab fa-python"></i> Python</span>
-                            <span><i class="fas fa-database"></i> SQL</span>
-                            <span><i class="fab fa-git-alt"></i> Git</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-<!-- =========================
-     PROJECTS SECTION HTML
-========================= -->
-
-<section id="projects">
-    <div class="container">
-
-        <h2>My Projects</h2>
-
-        <!-- FILTER BUTTONS -->
-        <div class="year-buttons">
-
-            <button class="year-btn active" data-year="all">
-                All
-            </button>
-
-            <button class="year-btn" data-year="sophomore">
-                Sophomore
-            </button>
-
-            <button class="year-btn" data-year="junior">
-                Junior
-            </button>
-
-            <button class="year-btn" data-year="senior">
-                Senior
-            </button>
-
-        </div>
-
-        <!-- GALLERY -->
-        <div id="gallery">
-
-            <!-- PROJECT 1 -->
-            <figure class="project-card-board sophomore">
-
-                <img src="imgs/project1.png"
-                    alt="Project One"
-                    class="project-image">
-
-                <h3>Project One</h3>
-
-                <p>
-                    A web application built with React and Node.js for task management.
-                </p>
-
-                <div class="project-tech">
-                    <span>React</span>
-                    <span>Node.js</span>
-                    <span>MongoDB</span>
-                </div>
-
-                <a href="#" class="project-link">
-                    View Project
-                </a>
-
-            </figure>
-
-            <!-- PROJECT 2 -->
-            <figure class="project-card-board junior">
-
-                <img src="imgs/project2.png"
-                    alt="Project Two"
-                    class="project-image">
-
-                <h3>Project Two</h3>
-
-                <p>
-                    An e-commerce platform with modern UI and secure payment integration.
-                </p>
-
-                <div class="project-tech">
-                    <span>Vue.js</span>
-                    <span>Express</span>
-                    <span>PostgreSQL</span>
-                </div>
-
-                <a href="#" class="project-link">
-                    View Project
-                </a>
-
-            </figure>
-
-            <!-- PROJECT 3 -->
-            <figure class="project-card-board senior">
-
-                <img src="imgs/project3.png"
-                    alt="Project Three"
-                    class="project-image">
-
-                <h3>Project Three</h3>
-
-                <p>
-                    A data visualization dashboard for business analytics.
-                </p>
-
-                <div class="project-tech">
-                    <span>D3.js</span>
-                    <span>Python</span>
-                    <span>Flask</span>
-                </div>
-
-                <a href="#" class="project-link">
-                    View Project
-                </a>
-
-            </figure>
-
-        </div>
-    </div>
-</section>
-
-        <section id="contact">
-            <div class="container">
-                <h2>Contact Me</h2>
-                <div class="contact-content">
-                    <div class="contact-info">
-                        <p>I'm always interested in new opportunities and collaborations. Let's connect!</p>
-                        <div class="contact-details">
-                            <p><strong>Email:</strong> alex.gold@example.com</p>
-                            <p><strong>LinkedIn:</strong> linkedin.com/in/alexgold</p>
-                            <p><strong>GitHub:</strong> github.com/alexgold</p>
-                        </div>
-                    </div>
-                    <form class="contact-form">
-                        <input type="text" placeholder="Your Name" required>
-                        <input type="email" placeholder="Your Email" required>
-                        <textarea placeholder="Your Message" required></textarea>
-                        <button type="submit" class="cta-button">Send Message</button>
-                    </form>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 Alexa Gold. All rights reserved.</p>
-            <div class="social-links">
-                <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-            </div>
-        </div>
-    </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
-
-    <script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
