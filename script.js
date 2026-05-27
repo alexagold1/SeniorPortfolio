@@ -84,6 +84,73 @@ if (navToggle && mainNav) {
 }
 
 // --- GSAP entry animations using ScrollTrigger (if available) ---
+/* ADD THIS UNDER YOUR GSAP SECTION */
+
+const retroPanels = document.querySelectorAll(
+  '.retro-window, .quote-panel, .broadcast-bar'
+);
+
+retroPanels.forEach((panel, index) => {
+
+  panel.style.opacity = '0';
+  panel.style.transform = 'translateY(18px)';
+
+  setTimeout(() => {
+    panel.style.transition =
+      'opacity 0.8s ease, transform 0.8s ease';
+
+    panel.style.opacity = '1';
+    panel.style.transform = 'translateY(0)';
+  }, 400 + (index * 180));
+
+});
+
+/* LIVE CLOCK */
+
+const clockElement = document.querySelector('.window-top span:last-child');
+
+function updateClock() {
+
+  const now = new Date();
+
+  const time = now.toLocaleTimeString([], {
+    hour: '2-digit',
+    minute: '2-digit'
+  });
+
+  if (clockElement) {
+    clockElement.textContent = time;
+  }
+}
+
+updateClock();
+
+setInterval(updateClock, 1000);
+
+/* RANDOM CHANNEL EFFECT */
+
+const ticker = document.querySelector('.ticker');
+
+const channelMessages = [
+  'NOW PLAYING • DR. DOG • WHERE\'D ALL THE TIME GO •',
+  'CHANNEL 03 • WEB DESIGN SHOWCASE •',
+  'RETRO TV MODE ACTIVATED •',
+  'BROADCAST SIGNAL STABLE •',
+  'LOADING PORTFOLIO ARCHIVES •'
+];
+
+let tickerIndex = 0;
+
+setInterval(() => {
+
+  tickerIndex++;
+
+  if (ticker) {
+    ticker.textContent =
+      channelMessages[tickerIndex % channelMessages.length];
+  }
+
+}, 5000);
 if (window.gsap) {
   try {
     if (window.gsap.registerPlugin) {
