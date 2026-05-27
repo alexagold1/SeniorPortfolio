@@ -17,6 +17,7 @@
   <div class="page-backdrop"></div>
 
   <div class="page-shell">
+    
     <div class="tv-frame">
 
       <div class="tv-topbar">
@@ -58,6 +59,16 @@
         </div>
 
         <div class="content-shell" id="contentShell">
+
+          <nav class="main-nav" aria-label="Primary">
+            <button class="nav-toggle" aria-expanded="false" aria-label="Toggle navigation">☰</button>
+            <ul class="nav-links">
+              <li><a href="#about">About Me</a></li>
+              <li><a href="#soph-projects">Soph Projects</a></li>
+              <li><a href="#junior-projects">Junior Projects</a></li>
+              <li><a href="#senior-projects">Senior Projects</a></li>
+            </ul>
+          </nav>
 
           <header class="screen-header">
             <span>WEB DESIGN PATHWAY</span>
@@ -113,14 +124,13 @@
             </section>
 
             <section class="info-grid">
-
-              <article class="panel">
+              <article class="panel" id="about">
                 <p class="panel-label">ABOUT YOU</p>
 
                 <h3>What you want people to know</h3>
 
                 <p>
-                  Replace this section with your personal story, your goals, and the kind of work you want to create.
+                  Replace this section with your personal story, your goals, and the kind of work you want to create. Tip: keep it short and friendly.
                 </p>
 
                 <ul class="bullet-list">
@@ -156,7 +166,7 @@
                 <h3>Let’s connect</h3>
 
                 <p>
-                  Replace these details with your email, school account, and any links you want to feature.
+                  These are placeholders for your email, social links, and school contact. Replace them anytime.
                 </p>
               </div>
 
@@ -166,6 +176,48 @@
                 <p><strong>GitHub:</strong> github.com/yourname</p>
               </div>
 
+            </section>
+
+            <section class="project-section" id="soph-projects">
+              <h3>Sophomore Projects</h3>
+              <div class="project-grid">
+                <article class="project-card">
+                  <h4>Project A</h4>
+                  <p>This is a placeholder card for your sophomore work.</p>
+                </article>
+                <article class="project-card">
+                  <h4>Project B</h4>
+                  <p>This is a placeholder card for your sophomore work.</p>
+                </article>
+              </div>
+            </section>
+
+            <section class="project-section" id="junior-projects">
+              <h3>Junior Projects</h3>
+              <div class="project-grid">
+                <article class="project-card">
+                  <h4>Project C</h4>
+                  <p>This is a placeholder card for your junior work.</p>
+                </article>
+                <article class="project-card">
+                  <h4>Project D</h4>
+                  <p>This is a placeholder card for your junior work.</p>
+                </article>
+              </div>
+            </section>
+
+            <section class="project-section" id="senior-projects">
+              <h3>Senior Projects</h3>
+              <div class="project-grid">
+                <article class="project-card">
+                  <h4>Capstone</h4>
+                  <p>This is a placeholder card for your senior capstone.</p>
+                </article>
+                <article class="project-card">
+                  <h4>Final Showcase</h4>
+                  <p>This is a placeholder card for your final portfolio highlight.</p>
+                </article>
+              </div>
             </section>
 
           </main>
@@ -189,6 +241,8 @@
     referrerpolicy="strict-origin-when-cross-origin"
   ></iframe>
 
+  <script src="js/gsap.min.js"></script>
+  <script src="js/ScrollTrigger.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
