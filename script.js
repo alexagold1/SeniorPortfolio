@@ -20,7 +20,7 @@ function startBroadcast() {
     contentShell.classList.add('active');
   }, 1400);
 
-  powerButton.textContent = 'TUNED IN';
+  powerButton.textContent = 'LOADING...';
   powerButton.disabled = true;
 }
 
