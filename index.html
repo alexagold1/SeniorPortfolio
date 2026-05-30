@@ -3,22 +3,43 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Alexa Gold — Web Design Portfolio</title>
+<title> Web Design Portfolio</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
  
+<div id="loader">
+  <div class="loader-inner">
+    <div class="loader-copy">Loading the end</div>
+    <div class="loader-bar">
+      <div class="loader-progress" id="loaderProgress"></div>
+    </div>
+    <div class="loader-sub">Enjoy my journey over the past 3 years!</div>
+  </div>
+</div>
+
 <!-- Custom cursor -->
 <div class="cursor" id="cursor"></div>
 <div class="cursor-ring" id="cursorRing"></div>
  
 <!-- Nav -->
 <nav>
-  <a href="#" class="nav-logo">Alex Morgan</a>
+  <a href="#" class="nav-logo" aria-label="AG logo and home link">
+    <svg class="nav-logo-mark" viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+      <!-- Letter A -->
+      <path class="logo-stroke logo-a" d="M25 95 L50 25 L75 95" />
+      <path class="logo-stroke logo-a-bar" d="M35 60 L65 60" />
+      <!-- Letter G -->
+      <path class="logo-stroke logo-g-arc" d="M110 30 Q130 30 130 60 Q130 90 110 90" />
+      <path class="logo-stroke logo-g-base" d="M110 90 L145 90" />
+      <path class="logo-stroke logo-g-hook" d="M145 90 L145 60" />
+    </svg>
+    <span class="nav-logo-text">Alexa Gold</span>
+  </a>
   <ul class="nav-links">
-    <li><a href="#work">Work</a></li>
     <li><a href="#about">About</a></li>
+    <li><a href="#work">Work</a></li>
     <li><a href="#process">Process</a></li>
     <li><a href="#timeline">Journey</a></li>
     <li><a href="#contact">Contact</a></li>
@@ -28,12 +49,37 @@
 <!-- Hero -->
 <section id="hero">
   <div class="hero-left">
-    <p class="hero-eyebrow">Advanced Web Design — Class of 2025</p>
+    <div class="hero-logo-wrap">
+      <svg viewBox="0 0 200 120" class="hero-logo-svg" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+        <!-- Letter A -->
+        <path class="logo-stroke logo-a" d="M25 95 L50 25 L75 95" />
+        <path class="logo-stroke logo-a-bar" d="M35 60 L65 60" />
+        <!-- Letter G -->
+<!-- G -->
+<path class="logo-stroke logo-g-arc"
+      d="M145 40
+         Q145 25 125 25
+         Q100 25 100 60
+         Q100 95 125 95
+         Q145 95 145 75" />
+
+<path class="logo-stroke logo-g-hook"
+      d="M145 75 L122 75" />
+
+<path class="logo-stroke logo-g-base"
+      d="M122 75 L122 62" />
+      </svg>
+    </div>
+    <div class="hero-typewriter">
+      <span class="type-intro">I am a</span>
+      <span class="typewords" id="typewords">web developer</span>
+    </div>
+    <p class="hero-eyebrow"> Marlboro Highschool Web Design Pathway Program — Class of 2026</p>
     <h1 class="hero-name">
-      Crafting<br><em>digital</em><br>experiences
+      My<br><em>High School</em><br>Carrer
     </h1>
     <p class="hero-desc">
-      A three-year journey through design systems, interaction design, and the art of making the web feel human.
+      Proof that I did more than just nap these past three years.
     </p>
     <div class="hero-cta">
       <a href="#work" class="btn-primary">View My Work</a>
@@ -42,7 +88,7 @@
   </div>
   <div class="hero-right">
     <div class="hero-img-wrap">
-      <div class="hero-img-placeholder">Portfolio Image</div>
+      <img src="imgs/picturehome.png" alt="Portrait of Alexa Gold" />
     </div>
   </div>
   <div class="hero-scroll">
@@ -77,6 +123,14 @@
 <!-- About -->
 <section id="about">
   <div class="section-label reveal">About</div>
+  <div class="about-photos">
+    <div class="about-photo reveal">
+      <img src="imgs/picturehome.png" alt="Portrait placeholder 1" />
+    </div>
+    <div class="about-photo reveal">
+      <img src="imgs/picturehome.png" alt="Portrait placeholder 2" />
+    </div>
+  </div>
   <div class="about-text">
     <h2 class="reveal">I design with <em>intention,</em><br>build with precision.</h2>
     <p class="reveal reveal-delay-1">
@@ -117,78 +171,145 @@
 <!-- Work -->
 <section id="work">
   <div class="work-header reveal">
-    <h2>Selected <em>Work</em></h2>
+    <h2>All <em>Projects</em></h2>
     <span>2023 — 2025</span>
   </div>
-  <div class="projects-grid">
- 
-    <div class="project-card featured reveal">
-      <div class="project-img">
-        <div class="project-placeholder p1">Featured Project Image</div>
-        <a href="#" class="project-link">
-          <span class="project-link-label">View Project →</span>
-        </a>
-      </div>
-      <div class="project-info">
-        <div class="project-meta">
-          <h3>Bloom — Botanical E-Commerce Rebrand</h3>
-          <p>Brand Identity · UI Design · Front-End Development</p>
+  <div class="projects-gallery-grid">
+    <article class="gallery-tile reveal">
+      <span class="tile-year">2023</span>
+      <h3>Bloom</h3>
+      <p>Botanical e-commerce rebrand</p>
+    </article>
+    <article class="gallery-tile reveal reveal-delay-1">
+      <span class="tile-year">2024</span>
+      <h3>Meridian</h3>
+      <p>Travel app interface</p>
+    </article>
+    <article class="gallery-tile reveal reveal-delay-2">
+      <span class="tile-year">2025</span>
+      <h3>Studio Folio</h3>
+      <p>Design system and library</p>
+    </article>
+    <article class="gallery-tile reveal reveal-delay-3">
+      <span class="tile-year">2024</span>
+      <h3>Frequency</h3>
+      <p>Music platform interaction</p>
+    </article>
+    <article class="gallery-tile reveal reveal-delay-4">
+      <span class="tile-year">2023</span>
+      <h3>Pulse</h3>
+      <p>Brand identity and motion</p>
+    </article>
+    <article class="gallery-tile reveal reveal-delay-1">
+      <span class="tile-year">2024</span>
+      <h3>Nova</h3>
+      <p>Responsive marketing site</p>
+    </article>
+    <article class="gallery-tile reveal reveal-delay-2">
+      <span class="tile-year">2025</span>
+      <h3>Scope</h3>
+      <p>Agency portfolio concept</p>
+    </article>
+    <article class="gallery-tile reveal reveal-delay-3">
+      <span class="tile-year">2025</span>
+      <h3>Echo</h3>
+      <p>Interactive landing experience</p>
+    </article>
+  </div>
+
+  <div class="project-highlights reveal reveal-delay-1">
+    <div class="section-label">Yearly Highlights</div>
+    <div class="highlight-tabs">
+      <button class="highlight-tab active" data-year="sophomore">Sophomore</button>
+      <button class="highlight-tab" data-year="junior">Junior</button>
+      <button class="highlight-tab" data-year="senior">Senior</button>
+    </div>
+    <div class="highlight-panels">
+      <div class="highlight-panel active" data-year="sophomore">
+        <div class="highlight-card" data-project="sophomore-1">
+          <span class="highlight-year">Campus Connect</span>
+          <h3>Homepage Redesign</h3>
+          <p>Community-driven landing experience with accessible navigation and engaging calls to action.</p>
+          <button class="btn-secondary highlight-btn">View Details</button>
         </div>
-        <span class="project-num">01</span>
+        <div class="highlight-card" data-project="sophomore-2">
+          <span class="highlight-year">StudyStream</span>
+          <h3>Student Resource Hub</h3>
+          <p>A responsive portal for notes, events, and announcements with clear content hierarchy.</p>
+          <button class="btn-secondary highlight-btn">View Details</button>
+        </div>
+        <div class="highlight-card" data-project="sophomore-3">
+          <span class="highlight-year">Event Pulse</span>
+          <h3>Campus Calendar</h3>
+          <p>Interactive events board designed for easy scanning and efficient RSVP interactions.</p>
+          <button class="btn-secondary highlight-btn">View Details</button>
+        </div>
+      </div>
+      <div class="highlight-panel" data-year="junior">
+        <div class="highlight-card" data-project="junior-1">
+          <span class="highlight-year">Meridian</span>
+          <h3>Travel Dashboard</h3>
+          <p>Immersive itinerary layout with motion-rich transitions and intuitive route planning.</p>
+          <button class="btn-secondary highlight-btn">View Details</button>
+        </div>
+        <div class="highlight-card" data-project="junior-2">
+          <span class="highlight-year">Atlas</span>
+          <h3>Interactive Mapping</h3>
+          <p>Smart map interface that blends exploration, collections, and personalization in a compact layout.</p>
+          <button class="btn-secondary highlight-btn">View Details</button>
+        </div>
+        <div class="highlight-card" data-project="junior-3">
+          <span class="highlight-year">Voyage</span>
+          <h3>Experience Preview</h3>
+          <p>Showcase of destination stories and booking details with dynamic content blocks.</p>
+          <button class="btn-secondary highlight-btn">View Details</button>
+        </div>
+      </div>
+      <div class="highlight-panel" data-year="senior">
+        <div class="highlight-card" data-project="senior-1">
+          <span class="highlight-year">Bloom</span>
+          <h3>Brand Refresh</h3>
+          <p>Elegant product presentation with refined typography and polished interaction details.</p>
+          <button class="btn-secondary highlight-btn">View Details</button>
+        </div>
+        <div class="highlight-card" data-project="senior-2">
+          <span class="highlight-year">Luna</span>
+          <h3>Launch Campaign</h3>
+          <p>Marketing experience with strong visual storytelling and conversion-focused content.</p>
+          <button class="btn-secondary highlight-btn">View Details</button>
+        </div>
+        <div class="highlight-card" data-project="senior-3">
+          <span class="highlight-year">Forge</span>
+          <h3>Portfolio System</h3>
+          <p>A modular case study layout built for scale, reusable components, and rapid content updates.</p>
+          <button class="btn-secondary highlight-btn">View Details</button>
+        </div>
       </div>
     </div>
- 
-    <div class="project-card reveal reveal-delay-1">
-      <div class="project-img">
-        <div class="project-placeholder p2">Project Image</div>
-        <a href="#" class="project-link">
-          <span class="project-link-label">View Project →</span>
-        </a>
-      </div>
-      <div class="project-info">
-        <div class="project-meta">
-          <h3>Meridian — Travel App UI</h3>
-          <p>UX Design · Prototyping · User Testing</p>
-        </div>
-        <span class="project-num">02</span>
-      </div>
-    </div>
- 
-    <div class="project-card reveal reveal-delay-2">
-      <div class="project-img">
-        <div class="project-placeholder p3">Project Image</div>
-        <a href="#" class="project-link">
-          <span class="project-link-label">View Project →</span>
-        </a>
-      </div>
-      <div class="project-info">
-        <div class="project-meta">
-          <h3>Studio Folio — Design System</h3>
-          <p>Component Library · Documentation · CSS Architecture</p>
-        </div>
-        <span class="project-num">03</span>
-      </div>
-    </div>
- 
-    <div class="project-card reveal">
-      <div class="project-img">
-        <div class="project-placeholder p4">Project Image</div>
-        <a href="#" class="project-link">
-          <span class="project-link-label">View Project →</span>
-        </a>
-      </div>
-      <div class="project-info">
-        <div class="project-meta">
-          <h3>Frequency — Music Platform</h3>
-          <p>Interactive Design · JavaScript · Animation</p>
-        </div>
-        <span class="project-num">04</span>
-      </div>
-    </div>
- 
   </div>
 </section>
- 
+
+<div id="projectPopup" class="project-popup">
+  <div class="popup-inner">
+    <button class="popup-close" aria-label="Close project details">✕</button>
+    <div class="popup-heading">
+      <span class="popup-year"></span>
+      <h3 class="popup-title"></h3>
+    </div>
+    <p class="popup-summary"></p>
+    <div class="popup-info">
+      <div>
+        <strong>Tools</strong>
+        <p class="popup-tools"></p>
+      </div>
+      <div>
+        <strong>Highlights</strong>
+        <p class="popup-highlights"></p>
+      </div>
+    </div>
+  </div>
+</div>
+
 <!-- Process -->
 <section id="process">
   <div class="section-label reveal">How I Work</div>
@@ -319,7 +440,12 @@
     <a href="#">Resume ↓</a>
   </div>
 </footer>
- 
+
+<button id="backToTop" class="back-to-top" aria-label="Back to top">
+  <span>↑</span>
+  <span class="back-to-top-text">Top</span>
+</button>
+
 <script src="script.js"></script>
 </body>
 </html>
