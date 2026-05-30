@@ -1,345 +1,325 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Retro Portfolio TV</title>
-
-  <link rel="stylesheet" href="style.css" />
-
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
-  <link href="https://fonts.googleapis.com/css2?family=VT323&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alexa Gold — Web Design Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-  <div class="page-backdrop"></div>
-
-  <div class="page-shell">
-    
-    <div class="tv-frame">
-
-      <div class="tv-topbar">
-        <span class="tv-brand">RETRO PORTFOLIO TV</span>
-        <span class="tv-channel">THE LAST CHAPTER </span>
-      </div>
-
-      <div class="tv-screen" id="tvScreen">
-
-        <div class="static-overlay" id="staticOverlay">
-
-          <div class="tv-static"></div>
-
-          <div class="static-ripples"></div>
-
-          <div class="intro-copy">
-            <p class="signal-label">NO SIGNAL</p>
-
-            <h1>ALEXA GOLDS PORTFOLIO</h1>
-
-            <p class="intro-copy__subtitle">
-              My Web design pathway highlights from the past 3 years. I hope you enjoy!
-            </p>
-
-            <div class="intro-bands">
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
-
-            <button id="powerButton" class="power-button">
-              POWER ON
-            </button>
-
-            <p class="intro-copy__note">
-              Tuning in to “Where’d All the Time Go?” by Dr. Dog
-            </p>
-          </div>
-        </div>
-
-        <div class="content-shell" id="contentShell">
-
-          <nav class="main-nav" aria-label="Primary">
-            <button class="nav-toggle" aria-expanded="false" aria-label="Toggle navigation">☰</button>
-            <ul class="nav-links">
-              <li><a href="#about">About Me</a></li>
-              <li><a href="#soph-projects">Soph Projects</a></li>
-              <li><a href="#junior-projects">Junior Projects</a></li>
-              <li><a href="#senior-projects">Senior Projects</a></li>
-            </ul>
-          </nav>
-
-          <header class="screen-header">
-            <span>WEB DESIGN PATHWAY</span>
-            <span>3 YEARS • DIGITAL SHOWCASE</span>
-          </header>
-
-          <main class="screen-content">
-            <section class="broadcast-bar">
-  <div class="ticker-wrap">
-    <div class="ticker">
-      NOW PLAYING • DR. DOG • WHERE'D ALL THE TIME GO • WEB DESIGN SHOWCASE • CHANNEL 03 • EST. 2026 •
+ 
+<!-- Custom cursor -->
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+ 
+<!-- Nav -->
+<nav>
+  <a href="#" class="nav-logo">Alex Morgan</a>
+  <ul class="nav-links">
+    <li><a href="#work">Work</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#process">Process</a></li>
+    <li><a href="#timeline">Journey</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+ 
+<!-- Hero -->
+<section id="hero">
+  <div class="hero-left">
+    <p class="hero-eyebrow">Advanced Web Design — Class of 2025</p>
+    <h1 class="hero-name">
+      Crafting<br><em>digital</em><br>experiences
+    </h1>
+    <p class="hero-desc">
+      A three-year journey through design systems, interaction design, and the art of making the web feel human.
+    </p>
+    <div class="hero-cta">
+      <a href="#work" class="btn-primary">View My Work</a>
+      <a href="#contact" class="btn-secondary">Get in Touch</a>
     </div>
   </div>
-
-  <div class="status-lights">
-    <span class="live-dot"></span>
-    <p>LIVE BROADCAST</p>
-  </div>
-</section>
-
-<section class="retro-grid">
-
-  <article class="retro-window">
-    <div class="window-top">
-      <span>CHANNEL GUIDE</span>
-      <span>02:34 PM</span>
-    </div>
-
-    <div class="channel-list">
-      <div>
-        <span>CH 01</span>
-        <p>About Alexa</p>
-      </div>
-
-      <div>
-        <span>CH 02</span>
-        <p>Design Projects</p>
-      </div>
-
-      <div>
-        <span>CH 03</span>
-        <p>Creative Process</p>
-      </div>
-
-      <div>
-        <span>CH 04</span>
-        <p>Future Goals</p>
-      </div>
-    </div>
-  </article>
-
-  <article class="retro-window">
-    <div class="window-top">
-      <span>SYSTEM STATUS</span>
-      <span>ONLINE</span>
-    </div>
-
-    <div class="system-bars">
-
-      <div class="bar-item">
-        <p>Creativity</p>
-        <div class="bar">
-          <span style="width: 95%"></span>
-        </div>
-      </div>
-
-      <div class="bar-item">
-        <p>HTML/CSS</p>
-        <div class="bar">
-          <span style="width: 88%"></span>
-        </div>
-      </div>
-
-      <div class="bar-item">
-        <p>JavaScript</p>
-        <div class="bar">
-          <span style="width: 72%"></span>
-        </div>
-      </div>
-
-      <div class="bar-item">
-        <p>UI Design</p>
-        <div class="bar">
-          <span style="width: 90%"></span>
-        </div>
-      </div>
-
-    </div>
-  </article>
-
-</section>
-
-<section class="quote-panel">
-  <p class="quote-label">TODAY'S BROADCAST</p>
-
-  <h3>
-    “Design is taking ideas and turning them into something people actually remember.”
-  </h3>
-
-  <p>
-    This portfolio is styled like an old television broadcast to show my projects,
-    creativity, and growth throughout the Web Design pathway.
-  </p>
-</section>
-
-            <section class="hero-card">
-
-              <div>
-                <p class="eyebrow">WELCOME TO THE SET</p>
-
-                <h2>Alexa Gold</h2>
-
-                <p class="hero-text">
-                  Replace this blurb with your introduction. This is where you can talk about your school experience, your design style, and what you are most proud of in the pathway.
-                </p>
-
-                <div class="hero-metrics">
-                  <div>
-                    <strong>3</strong>
-                    <span>Years in the program</span>
-                  </div>
-
-                  <div>
-                    <strong>12+</strong>
-                    <span>Projects completed</span>
-                  </div>
-
-                  <div>
-                    <strong>UX +</strong>
-                    <span>Web design and coding</span>
-                  </div>
-                </div>
-              </div>
-
-              <div class="hero-side">
-
-                <div class="photo-slot">
-                  <span>Insert your photo here</span>
-                </div>
-
-                <div class="tag-row">
-                  <span>HTML</span>
-                  <span>CSS</span>
-                  <span>JavaScript</span>
-                  <span>Figma</span>
-                  <span>Accessibility</span>
-                </div>
-
-              </div>
-            </section>
-
-            <section class="info-grid">
-              <article class="panel" id="about">
-                <p class="panel-label">ABOUT YOU</p>
-
-                <h3>What you want people to know</h3>
-
-                <p>
-                  Replace this section with your personal story, your goals, and the kind of work you want to create. Tip: keep it short and friendly.
-                </p>
-
-                <ul class="bullet-list">
-                  <li>Insert your strongest skill</li>
-                  <li>Insert your favorite project</li>
-                  <li>Insert your next goal</li>
-                </ul>
-              </article>
-
-              <article class="panel">
-
-                <p class="panel-label">SKILLS</p>
-
-                <h3>Pathway skills to highlight</h3>
-
-                <div class="skill-pills">
-                  <span>Responsive layout</span>
-                  <span>CSS animations</span>
-                  <span>UI polish</span>
-                  <span>Interactivity</span>
-                  <span>Design systems</span>
-                  <span>Project planning</span>
-                </div>
-
-              </article>
-            </section>
-
-            <section class="contact-strip">
-
-              <div>
-                <p class="panel-label">CONTACT</p>
-
-                <h3>Let’s connect</h3>
-
-                <p>
-                  These are placeholders for your email, social links, and school contact. Replace them anytime.
-                </p>
-              </div>
-
-              <div class="contact-details">
-                <p><strong>Email:</strong> your.email@example.com</p>
-                <p><strong>LinkedIn:</strong> linkedin.com/in/yourname</p>
-                <p><strong>GitHub:</strong> github.com/yourname</p>
-              </div>
-
-            </section>
-
-            <section class="project-section" id="soph-projects">
-              <h3>Sophomore Projects</h3>
-              <div class="project-grid">
-                <article class="project-card">
-                  <h4>Project A</h4>
-                  <p>This is a placeholder card for your sophomore work.</p>
-                </article>
-                <article class="project-card">
-                  <h4>Project B</h4>
-                  <p>This is a placeholder card for your sophomore work.</p>
-                </article>
-              </div>
-            </section>
-
-            <section class="project-section" id="junior-projects">
-              <h3>Junior Projects</h3>
-              <div class="project-grid">
-                <article class="project-card">
-                  <h4>Project C</h4>
-                  <p>This is a placeholder card for your junior work.</p>
-                </article>
-                <article class="project-card">
-                  <h4>Project D</h4>
-                  <p>This is a placeholder card for your junior work.</p>
-                </article>
-              </div>
-            </section>
-
-            <section class="project-section" id="senior-projects">
-              <h3>Senior Projects</h3>
-              <div class="project-grid">
-                <article class="project-card">
-                  <h4>Capstone</h4>
-                  <p>This is a placeholder card for your senior capstone.</p>
-                </article>
-                <article class="project-card">
-                  <h4>Final Showcase</h4>
-                  <p>This is a placeholder card for your final portfolio highlight.</p>
-                </article>
-              </div>
-            </section>
-
-          </main>
-        </div>
-      </div>
-
-      <div class="tv-footer">
-        <span>PRESS POWER ON TO START</span>
-        <span>SENIOR YEAR • FINAL PROJECT • HAND-CODED</span>
-      </div>
-
+  <div class="hero-right">
+    <div class="hero-img-wrap">
+      <div class="hero-img-placeholder">Portfolio Image</div>
     </div>
   </div>
-
-  <iframe
-    id="bgPlayer"
-    title="Dr. Dog intro player"
-    src="https://www.youtube.com/embed/z5bzxPVJhbo?autoplay=1&mute=1&controls=0&rel=0&playsinline=1&loop=1&playlist=z5bzxPVJhbo"
-    allow="autoplay; encrypted-media"
-    loading="lazy"
-    referrerpolicy="strict-origin-when-cross-origin"
-  ></iframe>
-
-  <script src="js/gsap.min.js"></script>
-  <script src="js/ScrollTrigger.min.js"></script>
-  <script src="script.js"></script>
+  <div class="hero-scroll">
+    <div class="scroll-line"></div>
+    Scroll to explore
+  </div>
+  <p class="hero-year">2023 — 2025</p>
+</section>
+ 
+<!-- Marquee -->
+<div class="marquee-wrap">
+  <div class="marquee-track">
+    <span class="marquee-item">UI Design <span class="marquee-dot"></span></span>
+    <span class="marquee-item">Typography <span class="marquee-dot"></span></span>
+    <span class="marquee-item">Motion Design <span class="marquee-dot"></span></span>
+    <span class="marquee-item">UX Research <span class="marquee-dot"></span></span>
+    <span class="marquee-item">Design Systems <span class="marquee-dot"></span></span>
+    <span class="marquee-item">Accessibility <span class="marquee-dot"></span></span>
+    <span class="marquee-item">HTML & CSS <span class="marquee-dot"></span></span>
+    <span class="marquee-item">JavaScript <span class="marquee-dot"></span></span>
+    <span class="marquee-item">UI Design <span class="marquee-dot"></span></span>
+    <span class="marquee-item">Typography <span class="marquee-dot"></span></span>
+    <span class="marquee-item">Motion Design <span class="marquee-dot"></span></span>
+    <span class="marquee-item">UX Research <span class="marquee-dot"></span></span>
+    <span class="marquee-item">Design Systems <span class="marquee-dot"></span></span>
+    <span class="marquee-item">Accessibility <span class="marquee-dot"></span></span>
+    <span class="marquee-item">HTML & CSS <span class="marquee-dot"></span></span>
+    <span class="marquee-item">JavaScript <span class="marquee-dot"></span></span>
+  </div>
+</div>
+ 
+<!-- About -->
+<section id="about">
+  <div class="section-label reveal">About</div>
+  <div class="about-text">
+    <h2 class="reveal">I design with <em>intention,</em><br>build with precision.</h2>
+    <p class="reveal reveal-delay-1">
+      Over three years in the Advanced Web Design program, I've developed a deep understanding of how design and technology intersect. I believe the best digital experiences feel inevitable — like they couldn't have been designed any other way.
+    </p>
+    <p class="reveal reveal-delay-2">
+      My work spans brand identity, interface design, and front-end development. I care about the details others overlook: the rhythm of type, the weight of whitespace, the moment a user smiles at a subtle animation.
+    </p>
+    <div class="skills-grid">
+      <div class="skill-item reveal">
+        <h4>Design</h4>
+        <p>UI/UX, Typography, Layout Systems, Brand Identity, Motion</p>
+      </div>
+      <div class="skill-item reveal reveal-delay-1">
+        <h4>Build</h4>
+        <p>HTML5, CSS3, JavaScript ES6+, React, Figma to Code</p>
+      </div>
+      <div class="skill-item reveal reveal-delay-2">
+        <h4>Research</h4>
+        <p>User Testing, Accessibility Audits, Competitive Analysis</p>
+      </div>
+      <div class="skill-item reveal">
+        <h4>Tools</h4>
+        <p>Figma, Adobe Suite, VS Code, Git, Webflow</p>
+      </div>
+      <div class="skill-item reveal reveal-delay-1">
+        <h4>Principles</h4>
+        <p>WCAG 2.1, Responsive Design, Performance-First</p>
+      </div>
+      <div class="skill-item reveal reveal-delay-2">
+        <h4>Soft Skills</h4>
+        <p>Client Communication, Creative Direction, Iteration</p>
+      </div>
+    </div>
+  </div>
+</section>
+ 
+<!-- Work -->
+<section id="work">
+  <div class="work-header reveal">
+    <h2>Selected <em>Work</em></h2>
+    <span>2023 — 2025</span>
+  </div>
+  <div class="projects-grid">
+ 
+    <div class="project-card featured reveal">
+      <div class="project-img">
+        <div class="project-placeholder p1">Featured Project Image</div>
+        <a href="#" class="project-link">
+          <span class="project-link-label">View Project →</span>
+        </a>
+      </div>
+      <div class="project-info">
+        <div class="project-meta">
+          <h3>Bloom — Botanical E-Commerce Rebrand</h3>
+          <p>Brand Identity · UI Design · Front-End Development</p>
+        </div>
+        <span class="project-num">01</span>
+      </div>
+    </div>
+ 
+    <div class="project-card reveal reveal-delay-1">
+      <div class="project-img">
+        <div class="project-placeholder p2">Project Image</div>
+        <a href="#" class="project-link">
+          <span class="project-link-label">View Project →</span>
+        </a>
+      </div>
+      <div class="project-info">
+        <div class="project-meta">
+          <h3>Meridian — Travel App UI</h3>
+          <p>UX Design · Prototyping · User Testing</p>
+        </div>
+        <span class="project-num">02</span>
+      </div>
+    </div>
+ 
+    <div class="project-card reveal reveal-delay-2">
+      <div class="project-img">
+        <div class="project-placeholder p3">Project Image</div>
+        <a href="#" class="project-link">
+          <span class="project-link-label">View Project →</span>
+        </a>
+      </div>
+      <div class="project-info">
+        <div class="project-meta">
+          <h3>Studio Folio — Design System</h3>
+          <p>Component Library · Documentation · CSS Architecture</p>
+        </div>
+        <span class="project-num">03</span>
+      </div>
+    </div>
+ 
+    <div class="project-card reveal">
+      <div class="project-img">
+        <div class="project-placeholder p4">Project Image</div>
+        <a href="#" class="project-link">
+          <span class="project-link-label">View Project →</span>
+        </a>
+      </div>
+      <div class="project-info">
+        <div class="project-meta">
+          <h3>Frequency — Music Platform</h3>
+          <p>Interactive Design · JavaScript · Animation</p>
+        </div>
+        <span class="project-num">04</span>
+      </div>
+    </div>
+ 
+  </div>
+</section>
+ 
+<!-- Process -->
+<section id="process">
+  <div class="section-label reveal">How I Work</div>
+  <h2 class="reveal">A thoughtful<br><em>process</em></h2>
+  <div class="steps">
+    <div class="step reveal">
+      <span class="step-num">01 — Discover</span>
+      <h3>Research & Define</h3>
+      <p>Understanding users, goals, and constraints before a single pixel is placed.</p>
+    </div>
+    <div class="step reveal reveal-delay-1">
+      <span class="step-num">02 — Explore</span>
+      <h3>Ideate & Sketch</h3>
+      <p>Rapid iteration through concepts, always questioning assumptions early.</p>
+    </div>
+    <div class="step reveal reveal-delay-2">
+      <span class="step-num">03 — Craft</span>
+      <h3>Design & Prototype</h3>
+      <p>Translating ideas into high-fidelity screens with meticulous attention to detail.</p>
+    </div>
+    <div class="step reveal reveal-delay-3">
+      <span class="step-num">04 — Build</span>
+      <h3>Code & Refine</h3>
+      <p>Bridging the gap from design to production-ready, accessible code.</p>
+    </div>
+  </div>
+</section>
+ 
+<!-- Timeline -->
+<section id="timeline">
+  <div class="timeline-header reveal">
+    <p class="section-label">Journey</p>
+    <h2>Three years of<br><em>learning</em></h2>
+  </div>
+  <div class="timeline-items">
+    <div class="t-item reveal">
+      <div class="t-year">Year 1 — 2023</div>
+      <div class="t-content">
+        <h3>Foundations of Web Design</h3>
+        <p>Mastered HTML5 & CSS3, explored typography theory, color systems, and built my first responsive layouts from scratch. Fell in love with the craft.</p>
+        <span class="t-tag">HTML · CSS · Design Theory</span>
+      </div>
+    </div>
+    <div class="t-item reveal">
+      <div class="t-year">Year 2 — 2024</div>
+      <div class="t-content">
+        <h3>Interaction & Interface Design</h3>
+        <p>Deep-dived into JavaScript, UX principles, and Figma. Completed a live client project and a 6-week internship at a local creative agency.</p>
+        <span class="t-tag">JavaScript · UX · Figma · Internship</span>
+      </div>
+    </div>
+    <div class="t-item reveal">
+      <div class="t-year">Year 3 — 2025</div>
+      <div class="t-content">
+        <h3>Advanced Systems & Capstone</h3>
+        <p>Built complete design systems, explored React and motion design, and completed this portfolio as my capstone — a synthesis of everything learned.</p>
+        <span class="t-tag">React · Design Systems · Capstone</span>
+      </div>
+    </div>
+    <div class="t-item reveal">
+      <div class="t-year">Next — 2025+</div>
+      <div class="t-content">
+        <h3>Ready for What's Next</h3>
+        <p>Looking for opportunities to join a design team where I can continue growing, contribute meaningfully, and keep doing work I'm proud of.</p>
+        <span class="t-tag">Open to Opportunities</span>
+      </div>
+    </div>
+  </div>
+</section>
+ 
+<!-- Contact -->
+<section id="contact">
+  <div class="contact-inner">
+    <div class="contact-left reveal">
+      <p class="section-label">Let's Connect</p>
+      <h2>Start a<br><em>conversation</em></h2>
+      <p>Whether you're looking for a junior designer, have a project in mind, or just want to talk craft — I'd love to hear from you.</p>
+      <dl class="contact-details">
+        <div class="contact-detail">
+          <dt>Email</dt>
+          <dd><a href="mailto:hello@alexmorgan.design">hello@alexmorgan.design</a></dd>
+        </div>
+        <div class="contact-detail">
+          <dt>LinkedIn</dt>
+          <dd><a href="#">linkedin.com/in/alexmorgan</a></dd>
+        </div>
+        <div class="contact-detail">
+          <dt>Based in</dt>
+          <dd>New York, NY</dd>
+        </div>
+        <div class="contact-detail">
+          <dt>Available</dt>
+          <dd>June 2025</dd>
+        </div>
+      </dl>
+    </div>
+    <div class="contact-form reveal reveal-delay-2">
+      <div class="form-row">
+        <label for="name">Your Name</label>
+        <input type="text" id="name" placeholder="Jane Smith">
+      </div>
+      <div class="form-row">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" placeholder="jane@studio.com">
+      </div>
+      <div class="form-row">
+        <label for="subject">Subject</label>
+        <input type="text" id="subject" placeholder="I'd love to work together">
+      </div>
+      <div class="form-row">
+        <label for="message">Message</label>
+        <textarea id="message" rows="4" placeholder="Tell me about your project or opportunity..."></textarea>
+      </div>
+      <div class="form-submit">
+        <button type="button" class="btn-primary">Send Message</button>
+      </div>
+    </div>
+  </div>
+</section>
+ 
+<!-- Footer -->
+<footer>
+  <p>© 2025 Alex Morgan — Advanced Web Design Program</p>
+  <div class="footer-links">
+    <a href="#">Behance</a>
+    <a href="#">LinkedIn</a>
+    <a href="#">GitHub</a>
+    <a href="#">Resume ↓</a>
+  </div>
+</footer>
+ 
+<script src="script.js"></script>
 </body>
 </html>
