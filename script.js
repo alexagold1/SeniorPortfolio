@@ -260,4 +260,63 @@ setTimeout(() => {
     if (event.target === projectPopup) {
       projectPopup.classList.remove('show');
     }
+  })
+  /* ══════════════════════════════════════════════════════
+   PASTE THIS INTO YOUR script.js — anywhere at the bottom
+   ══════════════════════════════════════════════════════ */
+
+/* (removed duplicate aboutDivider block) */
+/* ══════════════════════════════════════════════════════
+   Replace your existing about JS at the bottom of
+   script.js with this
+   ══════════════════════════════════════════════════════ */
+
+/* ── ABOUT: Photo slides in from left ── */
+const aboutPhoto = document.querySelector('.about-photo-wrap');
+if (aboutPhoto) {
+  const photoObserver = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('slide-in');
+        photoObserver.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.2 });
+  photoObserver.observe(aboutPhoto);
+}
+
+/* ── ABOUT: Divider line reveal ── */
+const aboutDivider = document.querySelector('.about-divider');
+if (aboutDivider) {
+  const dividerObserver = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        dividerObserver.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.5 });
+  dividerObserver.observe(aboutDivider);
+}
+
+/* ── ABOUT: Stat counter animation ── */
+const aboutStatNums = document.querySelectorAll('.about-stat-num[data-count]');
+const statObserver = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (!e.isIntersecting) return;
+    const el = e.target;
+    const target = parseInt(el.dataset.count, 10);
+    const suffix = el.dataset.suffix || '';
+    const dur = 1400;
+    const start = performance.now();
+    function tick(now) {
+      const p = Math.min((now - start) / dur, 1);
+      const ease = 1 - Math.pow(1 - p, 3);
+      el.textContent = Math.round(ease * target) + suffix;
+      if (p < 1) requestAnimationFrame(tick);
+    }
+    requestAnimationFrame(tick);
+    statObserver.unobserve(el);
   });
+}, { threshold: 0.6 });
+aboutStatNums.forEach(el => statObserver.observe(el));
