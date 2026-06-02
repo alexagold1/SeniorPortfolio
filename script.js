@@ -181,6 +181,20 @@ setTimeout(() => {
       tools: 'CSS grid, JavaScript filtering, motion states, mobile-first layout',
       highlights: 'Clear hierarchy, visual affordances, event tagging, quick actions.'
     },
+    'sophomore-5': {
+      year: 'Sophomore',
+      title: 'Meridian',
+      summary: 'A travel-inspired landing page built for smooth content flow and clear messaging.',
+      tools: 'HTML, CSS, layout systems, responsive design',
+      highlights: 'Visual rhythm, modular card design, polished navigation.'
+    },
+    'sophomore-6': {
+      year: 'Sophomore',
+      title: 'Frequency',
+      summary: 'A music brand interface with strong visual rhythm, immersive panels, and audio-forward style.',
+      tools: 'Typography, UI design, interaction polish, responsive layouts',
+      highlights: 'Bold hero presence, playlist preview states, engaging motion cues.'
+    },
     'junior-1': {
       year: 'Junior',
       title: 'Meridian',
@@ -201,6 +215,27 @@ setTimeout(() => {
       summary: 'A polished experience preview focused on immersive travel storytelling and simplified trip planning.',
       tools: 'Visual storytelling, responsive layouts, JavaScript interactivity',
       highlights: 'Large imagery, content rhythm, seamless transitions.'
+    },
+    'junior-8': {
+      year: 'Junior',
+      title: 'Aura',
+      summary: 'Atmospheric brand exploration emphasizing layered imagery, refined typography, and a strong visual voice.',
+      tools: 'Branding, Figma, CSS, responsive layout',
+      highlights: 'Visual system, typographic hierarchy, immersive hero treatments.'
+    },
+    'junior-14': {
+      year: 'Junior',
+      title: 'Streamline',
+      summary: 'A business site redesign focused on clarity, approachable content hierarchy, and clearer conversion paths.',
+      tools: 'HTML, CSS, UX writing, responsive design',
+      highlights: 'Improved IA, simplified flows, purposeful CTAs.'
+    },
+    'junior-15': {
+      year: 'Junior',
+      title: 'Elevate',
+      summary: 'Feature-rich landing experience combining storytelling, clear CTAs, and refined interaction patterns.',
+      tools: 'Interaction design, prototyping, CSS animations',
+      highlights: 'Focused messaging, motion accents, accessible layout.'
     },
     'senior-1': {
       year: 'Senior',
@@ -225,18 +260,22 @@ setTimeout(() => {
     }
   };
 
-  const highlightTabs = document.querySelectorAll('.highlight-tab');
-  const highlightPanels = document.querySelectorAll('.highlight-panel');
-
-  highlightTabs.forEach(tab => {
-    tab.addEventListener('click', () => {
-      const targetYear = tab.dataset.year;
-      highlightTabs.forEach(item => item.classList.toggle('active', item === tab));
-      highlightPanels.forEach(panel => {
-        panel.classList.toggle('active', panel.dataset.year === targetYear);
+  function setupTabs(tabSelector, panelSelector, dataKey) {
+    const tabs = document.querySelectorAll(tabSelector);
+    const panels = document.querySelectorAll(panelSelector);
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        const targetValue = tab.dataset[dataKey];
+        tabs.forEach(item => item.classList.toggle('active', item === tab));
+        panels.forEach(panel => {
+          panel.classList.toggle('active', panel.dataset[dataKey] === targetValue);
+        });
       });
     });
-  });
+  }
+
+  setupTabs('.highlight-tab', '.highlight-panel', 'year');
+  setupTabs('.work-tab', '.work-panel', 'workYear');
 
   document.querySelectorAll('.highlight-btn').forEach(button => {
     button.addEventListener('click', event => {
