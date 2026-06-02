@@ -160,116 +160,67 @@ setTimeout(() => {
   const popupClose = document.querySelector('.popup-close');
 
   const projectDetails = {
-    'sophomore-1': {
-      year: 'Sophomore',
-      title: 'Campus Connect',
-      summary: 'A community-focused landing page built to support engagement, accessibility, and clear storytelling across screens.',
-      tools: 'HTML, CSS, JavaScript, Figma, Accessibility Audit',
-      highlights: 'Responsive design, interactive forms, mobile-first layout, semantic structure.'
-    },
-    'sophomore-2': {
-      year: 'Sophomore',
-      title: 'StudyStream',
-      summary: 'A student resource hub with clear pathways to coursework, events, and collaboration tools.',
-      tools: 'HTML, CSS, JavaScript, UX writing, responsive design',
-      highlights: 'Information architecture, dashboard cards, accessibility-first forms.'
-    },
     'sophomore-3': {
       year: 'Sophomore',
       title: 'Corfu, Greece',
       summary: 'Interactive destination showcase with travel inspiration and clear page structure.',
-      tools: 'HTML, CSS, JavaScript, responsive layout',
+      tools: 'HTML, CSS, Bootstrap',
       highlights: 'Travel visuals, destination cards, easy navigation.'
     },
     'sophomore-5': {
       year: 'Sophomore',
       title: 'Gilded Grinds',
       summary: 'A premium cafe landing experience with polished imagery and a strong menu hierarchy.',
-      tools: 'HTML, CSS, layout systems, responsive design',
+      tools: 'HTML, CSS, Bootstrap, W3schools',
       highlights: 'Brand storytelling, refined visuals, clean CTAs.'
     },
     'sophomore-6': {
       year: 'Sophomore',
       title: 'Dior',
       summary: 'A luxury fashion concept with bold typography, immersive imagery, and premium detail work.',
-      tools: 'Typography, UI design, interaction polish, responsive layouts',
+      tools: 'Html, CSS, Bootstrap, W3schools, Rows and Columns!',
       highlights: 'Luxury styling, editorial layout, strong visual rhythm.'
-    },
-    'junior-1': {
-      year: 'Junior',
-      title: 'Meridian',
-      summary: 'A travel dashboard designed for effortless exploration, combining immersive visuals with streamlined itinerary management.',
-      tools: 'Figma, prototyping, JavaScript, CSS grid, responsive UI',
-      highlights: 'Motion-rich states, progressive disclosure, itinerary previews.'
-    },
-    'junior-2': {
-      year: 'Junior',
-      title: 'Atlas',
-      summary: 'An interactive mapping concept that connects discovery, collections, and personal recommendations.',
-      tools: 'UX research, map UI patterns, CSS transitions, micro-interactions',
-      highlights: 'Contextual overlays, path navigation, modern card design.'
-    },
-    'junior-3': {
-      year: 'Junior',
-      title: 'Voyage',
-      summary: 'A polished experience preview focused on immersive travel storytelling and simplified trip planning.',
-      tools: 'Visual storytelling, responsive layouts, JavaScript interactivity',
-      highlights: 'Large imagery, content rhythm, seamless transitions.'
     },
     'junior-8': {
       year: 'Junior',
       title: 'Rock Paper Scissors',
       summary: 'Interactive game interface with clear rules and polished gameplay feedback.',
-      tools: 'JavaScript, HTML, CSS, game UI',
+      tools: 'JavaScript, HTML, CSS,',
       highlights: 'Animated results, responsive controls, playful styling.'
     },
     'junior-14': {
       year: 'Junior',
       title: 'New York Knicks',
       summary: 'Sports branding site with bold visuals and dynamic team-focused content.',
-      tools: 'HTML, CSS, branding, responsive design',
+      tools: 'HTML, CSS, Json, Javascript',
       highlights: 'Team identity, event highlights, strong imagery.'
     },
     'junior-15': {
       year: 'Junior',
       title: 'Little Toy Bird',
       summary: 'A whimsical product landing page with charming visuals and clear storytelling.',
-      tools: 'HTML, CSS, interaction design',
+      tools: 'HTML, CSS, Javascript, Json',
       highlights: 'Character-driven layout, playful details, engaging animation.'
-    },
-    'senior-1': {
-      year: 'Senior',
-      title: 'Bloom',
-      summary: 'A polished brand refresh with elegant product presentation and refined interaction details.',
-      tools: 'Brand systems, HTML/CSS, UI polish, motion design',
-      highlights: 'Typography systems, component reuse, polished micro-interactions.'
     },
     'senior-2': {
       year: 'Senior',
       title: 'College Recruitment',
       summary: 'Admissions website with clear calls to action and a polished informational experience.',
-      tools: 'HTML, CSS, UX, responsive design',
+      tools: 'HTML, CSS, Jquery, Vue',
       highlights: 'Clear storytelling, strong hierarchy, admissions messaging.'
-    },
-    'senior-3': {
-      year: 'Senior',
-      title: 'Forge',
-      summary: 'A modular portfolio system focused on reusable case study components and scalable content structure.',
-      tools: 'Design system thinking, responsive components, semantic HTML',
-      highlights: 'Scalable structure, consistent UI, polished presentation.'
     },
     'senior-4': {
       year: 'Senior',
       title: 'Dream Destinations',
       summary: 'Interactive travel slideshow highlight experience for showcasing dream locations.',
-      tools: 'HTML, CSS, jQuery, animation',
+      tools: 'HTML, CSS, jQuery,',
       highlights: 'Image storytelling, slideshow flow, travel inspiration.'
     },
     'senior-6': {
       year: 'Senior',
       title: 'Drink Spot Client Project',
       summary: 'Client website redesign focused on menu presentation and an inviting brand experience.',
-      tools: 'HTML, CSS, client collaboration, responsive UI',
+      tools: 'HTML, CSS, client collaboration, Javascript',
       highlights: 'Polished navigation, modern visual language, clear CTAs.'
     }
   };

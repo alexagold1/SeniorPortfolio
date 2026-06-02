@@ -98,7 +98,7 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    padding: 80px 60px 60px;
+    padding: 60px 60px 40px;
     position: relative;
     z-index: 2;
   }
@@ -270,7 +270,7 @@
  
 /* ── ABOUT ── */
 #about {
-  padding: 140px 60px 140px 96px;
+  padding: 100px 60px 100px 96px;
   display: grid;
   grid-template-columns: minmax(300px, 420px) 1fr;
   grid-template-rows: auto auto;
@@ -601,6 +601,11 @@
   .card-image {
     box-shadow: inset 0 0 0 1px rgba(255,255,255,0.24), 0 18px 45px rgba(196,82,122,0.18);
   }
+  /* Adjust Gilded Grinds in highlights to show green logo */
+  .highlight-card[data-project="sophomore-5"] .card-image img[src$="sophproj5.png"] {
+    object-position: 105% 20%;
+    filter: contrast(1.08) saturate(1.04) brightness(1.02);
+  }
   .card-link {
     display: inline-flex;
     align-items: center;
@@ -713,7 +718,7 @@
     display: none;
     gap: 24px;
     grid-template-columns: repeat(3, minmax(260px, 1fr));
-    grid-auto-rows: minmax(280px, auto);
+    grid-auto-rows: minmax(380px, auto);
   }
   .highlight-panel.active {
     display: grid;
@@ -724,7 +729,7 @@
     background: linear-gradient(180deg, rgba(255,255,255,0.98), rgba(255,250,252,0.96));
     border: 1px solid rgba(196,82,122,0.16);
     border-radius: 28px;
-    min-height: 320px;
+    min-height: 420px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -1264,21 +1269,97 @@
   @media (max-width: 900px) {
     nav { padding: 24px 28px; }
     .nav-links { display: none; }
-    #hero { grid-template-columns: 1fr; }
+    #hero { 
+      grid-template-columns: 1fr;
+      min-height: auto;
+      max-height: 85vh;
+      padding-top: 60px;
+    }
     .hero-right { display: none; }
-    .hero-left { padding: 120px 28px 80px; }
-    #about { grid-template-columns: 1fr; padding: 80px 28px; }
-    .about-photo-wrap { transform: translateY(40px); }
-    #work { padding: 80px 28px; }
+    .hero-left { 
+      padding: 30px 28px 40px;
+      justify-content: center;
+    }
+    .hero-name {
+      font-size: clamp(40px, 5vw, 64px);
+    }
+    .hero-desc {
+      margin-top: 20px;
+      font-size: 16px;
+    }
+    .hero-cta {
+      margin-top: 30px;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+    .hero-eyebrow {
+      margin-bottom: 16px;
+      font-size: 10px;
+    }
+    .hero-scroll { bottom: 20px; left: 28px; font-size: 9px; }
+    .hero-year { bottom: 20px; right: 28px; }
+    .marquee-wrap {
+      padding: 12px 0;
+    }
+    .marquee-item {
+      padding: 0 24px;
+      font-size: 10px;
+      gap: 24px;
+    }
+    #about { grid-template-columns: 1fr; padding: 60px 28px; }
+    .about-photo-wrap { transform: translateY(40px); max-width: 100%; }
+    .about-text {
+      padding-left: 0;
+    }
+    .about-text h2 {
+      font-size: clamp(28px, 3vw, 36px);
+    }
+    #work { padding: 60px 28px; }
     .work-panel { grid-template-columns: 1fr; }
     .work-card { min-height: auto; }
-    #highlights { padding: 80px 28px; }
+    #highlights { padding: 60px 28px; }
     #highlights .highlight-intro { margin-bottom: 28px; }
     .highlight-tabs { gap: 10px; }
     .highlight-panel { grid-template-columns: 1fr; }
     .highlight-card { min-height: auto; }
-    #timeline { padding: 80px 28px; }
-    #contact { padding: 80px 28px 60px; }
+    #timeline { padding: 60px 28px; }
+    #contact { padding: 60px 28px 40px; }
     .contact-inner { grid-template-columns: 1fr; gap: 60px; }
     footer { padding: 36px 28px; flex-direction: column; gap: 16px; text-align: center; }
+  }
+
+  @media (max-width: 480px) {
+    nav { padding: 16px 16px; }
+    .nav-logo { font-size: 10px; }
+    #hero { 
+      max-height: 70vh;
+      padding-top: 50px;
+    }
+    .hero-left { 
+      padding: 20px 16px 30px;
+    }
+    .hero-name {
+      font-size: clamp(32px, 6vw, 48px);
+    }
+    .hero-desc {
+      margin-top: 16px;
+      font-size: 14px;
+    }
+    .hero-cta {
+      margin-top: 24px;
+    }
+    .btn-primary, .btn-secondary {
+      font-size: 10px;
+      padding: 12px 16px;
+    }
+    .marquee-item {
+      padding: 0 16px;
+      font-size: 9px;
+      gap: 16px;
+    }
+    #about { padding: 48px 16px; }
+    #work { padding: 48px 16px; }
+    #highlights { padding: 48px 16px; }
+    #timeline { padding: 48px 16px; }
+    #contact { padding: 48px 16px 32px; }
   }
