@@ -22,6 +22,7 @@
   }
 
   section p {
+    font-size: 20px;
     line-height: 1.95;
     letter-spacing: 0.01em;
   }
@@ -126,7 +127,7 @@
   }
   .hero-desc {
     margin-top: 40px;
-    font-size: 20px;
+    font-size: 24px;
     font-weight: 300;
     color: var(--muted);
     max-width: 420px;
@@ -223,11 +224,11 @@
     animation: fadeIn 1s 1.2s forwards;
   }
   .hero-scroll {
-    position: absolute; bottom: 40px; left: 60px;
+    position: absolute; bottom: 8px; left: 60px;
     display: flex; align-items: center; gap: 16px;
     font-family: 'DM Mono', monospace;
-    font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase;
-    color: var(--muted);
+    font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--rust);
     opacity: 0;
     animation: fadeIn 1s 1.4s forwards;
   }
@@ -357,8 +358,7 @@
 .about-divider.visible { transform: scaleX(1); }
  
 .about-text p {
-  font-size: 18px;
-  font-weight: 300;
+    font-size: 22px;
   color: rgba(42,26,32,0.96);
   line-height: 2.2;
   margin-bottom: 20px;
@@ -638,7 +638,7 @@
     margin: 16px 0 14px;
   }
   .work-card p {
-    font-size: 15px;
+    font-size: 17px;
     line-height: 1.9;
     color: var(--muted);
     margin-bottom: 24px;
@@ -677,7 +677,7 @@
   }
   .highlight-intro {
     max-width: 740px;
-    font-size: 18px;
+    font-size: 20px;
     line-height: 1.95;
     color: var(--muted);
     margin-bottom: 42px;
@@ -780,7 +780,7 @@
     color: var(--ink);
   }
   .highlight-card p {
-    font-size: 16px;
+    font-size: 18px;
     line-height: 1.9;
     color: var(--ink);
     margin-bottom: 26px;
@@ -843,7 +843,7 @@
   }
   .popup-summary {
     margin-bottom: 24px;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 1.75;
     color: var(--ink);
   }
@@ -863,7 +863,7 @@
   }
   .popup-info p {
     margin: 0;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 1.7;
     color: var(--ink);
   }
@@ -942,7 +942,7 @@
     object-fit: contain;
   }
   .t-content h3 { font-size: 22px; font-weight: 400; margin-bottom: 8px; }
-  .t-content p { font-size: 18px; color: var(--muted); font-weight: 300; width: 100%; max-width: none; line-height: 2.2; }
+  .t-content p { font-size: 20px; color: var(--muted); font-weight: 300; width: 100%; max-width: none; line-height: 2.2; }
   .t-tag {
     display: inline-block;
     font-family: 'DM Mono', monospace;
@@ -973,7 +973,7 @@
   }
   .contact-left h2 em { font-style: italic; color: var(--rust); }
   .contact-left p {
-    font-size: 16px; color: rgba(42,26,32,0.86);
+    font-size: 20px; color: rgba(42,26,32,0.86);
     font-weight: 300; line-height: 1.95;
     margin-bottom: 40px;
     max-width: 700px;
