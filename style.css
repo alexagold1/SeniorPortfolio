@@ -532,6 +532,50 @@
     object-fit: cover;
     display: block;
   }
+  /* Improve junior project image visibility: slightly larger, crisper, subtle overlay */
+  .work-panel[data-work-year="junior"] .card-image {
+    position: relative;
+    height: 230px;
+    background: linear-gradient(180deg, rgba(250,240,243,0.9), rgba(242,219,228,0.9));
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,0.24), 0 20px 48px rgba(26,20,22,0.10);
+  }
+  .work-panel[data-work-year="junior"] .card-image img {
+    filter: contrast(1.08) saturate(1.06) brightness(1.02);
+    transform: translateZ(0);
+    transition: filter 220ms ease, transform 220ms ease;
+  }
+  .work-panel[data-work-year="junior"] .card-image::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 20px;
+    background: linear-gradient(to bottom, rgba(255,255,255,0.02), rgba(0,0,0,0.03));
+    pointer-events: none;
+  }
+  /* Specific per-image adjustments to correct framing and contrast */
+  .work-panel[data-work-year="junior"] .card-image img[src$="juniorproj8.png"] {
+    /* move image up further so game icons (rock/paper/scissors) are visible */
+    object-position: 50% 6%;
+    filter: contrast(1.18) saturate(1.1) brightness(1.04);
+  }
+  .work-panel[data-work-year="junior"] .card-image img[src$="juniorproj10.png"] {
+    /* lower the visible crop so the face is positioned lower in the card */
+    object-position: 50% 10%;
+    filter: contrast(1.08) saturate(1.03) brightness(1.02);
+    transform: translateY(0);
+  }
+  .work-panel[data-work-year="junior"] .card-image img[src$="juniorproj12.png"] {
+    object-position: 50% 58%;
+    filter: contrast(1.10) saturate(1.04) brightness(1.01);
+  }
+  /* Placeholder rule for juniorproj11 (file not present) — upload juniorproj11.png and this will pull the visible area up */
+  .work-panel[data-work-year="junior"] .card-image img[src$="juniorproj12.png"] {
+    /* Placeholder: lower the visible crop so title text ("Shamrock Hangman") sits in view when uploaded */
+    object-position: 70% 28%;
+    filter: contrast(1.16) saturate(1.08) brightness(1.04);
+    transform: translateY(0);
+  }
+  /* Note: juniorproj11.png is not present in imgs/ — please add the file if you want a tailored fix for it. */
   .card-image {
     box-shadow: inset 0 0 0 1px rgba(255,255,255,0.24), 0 18px 45px rgba(196,82,122,0.18);
   }
