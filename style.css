@@ -552,6 +552,28 @@
     background: linear-gradient(to bottom, rgba(255,255,255,0.02), rgba(0,0,0,0.03));
     pointer-events: none;
   }
+  /* Normalize sophomore & senior card image sizing to match junior thumbnails */
+  .work-panel[data-work-year="sophomore"] .card-image,
+  .work-panel[data-work-year="senior"] .card-image {
+    position: relative;
+    height: 230px;
+    background: linear-gradient(180deg, rgba(250,240,243,0.9), rgba(242,219,228,0.9));
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,0.24), 0 20px 48px rgba(26,20,22,0.10);
+  }
+  .work-panel[data-work-year="sophomore"] .card-image img,
+  .work-panel[data-work-year="senior"] .card-image img {
+    filter: contrast(1.08) saturate(1.04) brightness(1.02);
+    transform: translateZ(0);
+    transition: filter 220ms ease, transform 220ms ease;
+    object-fit: cover;
+  }
+  /* Bring title text into view for seniorproj4 (Alexa's Dream Destinations) */
+  .work-panel[data-work-year="senior"] .card-image img[src$="seniorproj4.png"] {
+    /* move up slightly so 'Alexas Dream Destinations' is visible */
+    object-position: 50% 6%;
+    filter: contrast(1.14) saturate(1.07) brightness(1.03);
+    transform: translateY(-4%);
+  }
   /* Specific per-image adjustments to correct framing and contrast */
   .work-panel[data-work-year="junior"] .card-image img[src$="juniorproj8.png"] {
     /* move image up further so game icons (rock/paper/scissors) are visible */

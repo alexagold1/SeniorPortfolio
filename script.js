@@ -258,6 +258,21 @@ setTimeout(() => {
       tools: 'Design system thinking, responsive components, semantic HTML',
       highlights: 'Scalable structure, consistent UI, polished presentation.'
     }
+    ,
+    'senior-4': {
+      year: 'Senior',
+      title: 'Mosaic',
+      summary: 'Capstone showcase layout designed for compelling storytelling and content-forward presentation.',
+      tools: 'Layout composition, visual hierarchy, responsive grids',
+      highlights: 'Narrative sequencing, immersive media slots, clear CTA placement.'
+    },
+    'senior-6': {
+      year: 'Senior',
+      title: 'Aegis',
+      summary: 'Security-themed interface study emphasizing clarity, trust signals, and accessible interactions.',
+      tools: 'UI design, accessibility, animation polish',
+      highlights: 'High-contrast UI, clear affordances, accessible controls.'
+    }
   };
 
   function setupTabs(tabSelector, panelSelector, dataKey) {
